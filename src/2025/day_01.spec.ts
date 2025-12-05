@@ -45,7 +45,7 @@ describe('day_01', () => {
       const amount = 150;
       const target = start - amount; // -100
 
-      const [new_pos, clicks_counted] = clamp_pos_and_count_clicks(start, -amount);
+      const [new_pos, clicks_counted] = clamp_pos_and_count_clicks(target);
 
       // Expected: new_pos should be 0 and the dial passes 0 twice during the rotation
       expect(new_pos).toBe(0);
