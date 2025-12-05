@@ -1,6 +1,7 @@
 import run_2018 from './2018';
 import run_2019 from './2019';
 import run_2024 from './2024';
+import run_2025 from './2025';
 import readFile from './helpers/readFile';
 
 const args = process.argv.slice(2);
@@ -32,13 +33,16 @@ async function run (year: number, day: number) {
     case 2024:
       run_2024(day, input);
       break;
+
+    case 2025:
+      run_2025(day, input);
+      break;
   
     default:
       console.error(`Unable to find year ${year}, escaping without running code.`)
       process.exit(1);
   }
 
-  // successful exit
   process.exit(0);
 }
 
